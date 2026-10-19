@@ -1,0 +1,32 @@
+[Unit]
+Description=Wolfy WhatsApp assistant
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=wolfy
+Group=wolfy
+WorkingDirectory=/var/lib/wolfy
+EnvironmentFile=/etc/wolfy/wolfy.env
+ExecStart=/opt/wolfy/wolfy serve
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=45
+StateDirectory=wolfy
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/wolfy
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+LockPersonality=yes
+
+[Install]
+WantedBy=multi-user.target

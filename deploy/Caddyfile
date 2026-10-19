@@ -1,0 +1,11 @@
+# Replace with a hostname whose DNS points to the VPS.
+bot.example.org {
+	@webhook path /webhook
+	handle @webhook {
+		reverse_proxy 127.0.0.1:8080
+	}
+	handle {
+		respond "Not found" 404
+	}
+	# Access logging deliberately disabled: webhook verification uses a query secret.
+}

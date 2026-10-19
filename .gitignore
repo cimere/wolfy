@@ -1,0 +1,13 @@
+.idea/
+.env
+.env.*
+!.env.example
+secrets/
+data/
+backups/
+bin/
+coverage.out
+*.db
+*.db.lock
+*.test
+.DS_Store
