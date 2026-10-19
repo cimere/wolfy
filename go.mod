@@ -1,10 +1,10 @@
 module wolfy
 
-go 1.24.0
+go 1.26.0
 
 require (
 	go.etcd.io/bbolt v1.4.3
-	golang.org/x/oauth2 v0.32.0
+	golang.org/x/oauth2 v0.37.0
 )
 
 require (
