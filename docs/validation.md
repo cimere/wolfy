@@ -18,7 +18,7 @@ Audit and demo failures below were reproduced on October 19. Track owners, next 
 
 - **Vulnerability scan (B-001):** no result recorded; scanner download failed because of session DNS.
 - **Local port demo (B-002):** no successful `make smoke` run recorded; the sandbox denied local listening. Simulated integration tests do not use sockets.
-- **GitHub CI:** workflow is configured but has not yet run on GitHub.
+- **GitHub CI (B-006):** workflow is configured but has not run. GitHub rejected the initial push on October 19 because the HTTPS OAuth credential lacks `workflow` scope.
 - **Live activation (B-003 through B-005):** authenticated provider checks, VPS installation, and the pilot are pending. Follow acceptance checks in `operations.md`, including response accuracy, pricing, and provider configuration.
 
 Passing software tests does not prove the absence of vulnerabilities or the semantic accuracy of model responses. Update this document with actual audit, smoke test, and pilot results.
